@@ -19,7 +19,7 @@ const wrapPromise = (promise) => {
             else if(status === "error")
                 throw result;
             else if(status === "success")
-                return result;
+                return {data: result.data, totalCount: result.headers["x-total-count"]};
         }
     };
 }

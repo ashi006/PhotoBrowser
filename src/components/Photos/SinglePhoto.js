@@ -1,9 +1,9 @@
 import {Suspense} from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Spinner from '../spinner.gif';
-import { getPhotoDetails, getAlbumDetails, getUserDetails } from '../api';
+import Spinner from '../../images/spinner.gif';
 import { useParams } from "react-router-dom";
+import { getPhotoDetails, getAlbumDetails, getUserDetails } from '../../api';
 import { FaUser, FaEnvelope, FaPhone, FaGlobe, FaMapMarker } from "react-icons/fa";
 
 const SinglePhoto = () => {
@@ -18,7 +18,8 @@ const SinglePhoto = () => {
 }
 
 const PhotoDetail = ({resource}) => {
-  const photoDetails = resource.read();
+  const response = resource.read();
+  const photoDetails = response.data;
   const albumObj = getAlbumDetails(photoDetails.albumId);
 
   return (
@@ -38,7 +39,8 @@ const PhotoDetail = ({resource}) => {
 }
 
 const AlbumDetail = ({resource}) => {
-  const albumDetails = resource.read();
+  const response = resource.read();
+  const albumDetails = response.data;
   const userObj = getUserDetails(albumDetails.userId);
 
   return (
@@ -54,7 +56,8 @@ const AlbumDetail = ({resource}) => {
 
 
 const UserDetail = ({resource}) => {
-  const userDetails = resource.read();
+  const response = resource.read();
+  const userDetails = response.data;
 
   return (
     <>

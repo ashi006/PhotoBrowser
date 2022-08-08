@@ -16,7 +16,7 @@ code {
 .container {
   margin-bottom: 60px !important;
   padding-top: 100px;
-  /* text-align: center; */
+  padding-bottom: 50px;
 }
 .page-description {
   text-align: center;
@@ -239,6 +239,7 @@ code {
   text-align: center;
   font-weight: 600;
   font-size: 14px;
+  z-index: 999999;
 }
 .footer p {
   margin-top: revert;
@@ -249,7 +250,6 @@ code {
 .photo-wrapper {
   border-radius: 23px;
   position: relative;
-  /* overflow: hidden; */
   box-shadow: 3px 4px 16px rgb(165 165 165 / 81%);
 }
 .photo-wrapper img {
@@ -273,15 +273,6 @@ code {
   border-radius: 0px 100% 0 20px;
   height: 0%;
   transition: width 1s, height 1s;
-  /* position: absolute;
-  bottom: -4px;
-  left: -5px;
-  right: 0;
-  background-color: white;
-  overflow: hidden;
-  width: 40%;
-  height: 0;
-  transition: .5s ease; */
 }
 .photo-wrapper:hover .overlay {
   transform: scale(1.08);
@@ -290,18 +281,6 @@ code {
   height: 35%;
   width: 25%;
 }
-/* .photo-wrapper:hover .overlay {
-  height: 50%;
-  bottom: -20%;
-  left: -22%;
-  border-radius: 50%;
-  width: 40%;
-  /* height: 33%;
-  bottom: -6%;
-  left: -15%;
-  transform: rotate(43deg);
-  width: 50%; /*
-} */
 .photo-wrapper .text {
   color: #5161ce;
   font-size: 0px;
@@ -309,13 +288,6 @@ code {
   bottom: 10%;
   left: 20%;
   transition: font-size 1s;
-  /* transform: rotate(-42deg);
-  color: black;
-  font-size: 10px;
-  position: absolute;
-  display: none;
-  top: 8%;
-  left: 35%; */
 }
 .photo-wrapper:hover .text {
   font-size: 26px;
@@ -331,3 +303,77 @@ code {
   font-style: italic;
 }
 /* Single Photo Component - End */
+
+/* Pagination Component - Start */
+.page-item {
+  margin: 0 5px;
+  text-align: center;
+  line-height: 34px;
+}
+.page-link {
+  color: #5161ce !important;
+  border: 1px solid #5161ce !important;
+  height: 42px;
+  min-width: 42px;
+}
+.page-item.active .page-link {
+  color: #fff !important;
+  background-color: #5161ce;
+}
+.page-item.disabled .page-link {
+  color: #9a9a9a !important;
+  border-color: #b5b5b5 !important;
+}
+/* Pagination Component - End */
+
+/* Albums Component - Start */
+.album-wrapper img {
+  transition: all 1s;
+  width: 90%;
+}
+.album-wrapper a {
+  text-decoration: none;
+}
+.album-wrapper:hover img {
+  transform: scale(1.1);
+}
+.album-wrapper .text {
+  text-align: center;
+  color: #000;
+  font-size: 16px;
+}
+/* Albums Component - End */
+
+/* Users Component - Start */
+.user-wrapper img {
+  transition: all 1s;
+  width: 90%;
+}
+.user-wrapper a {
+  text-decoration: none;
+}
+.user-wrapper:hover img {
+  transform: scale(1.1);
+}
+.user-wrapper ul {
+  list-style: none;
+  margin-top: 10px;
+  padding: 0;
+}
+.user-wrapper ul li {
+  text-align: center;
+  color: #000;
+  font-size: 16px;
+}
+/* Users Component - End */
+
+/* Single User Component - Start */
+.single-user-detail {
+  list-style: none;
+  padding: 0px;
+  font-size: 18px;
+}
+.single-user-detail li {
+  margin-top: 40px;
+}
+/* Single User Component - End */

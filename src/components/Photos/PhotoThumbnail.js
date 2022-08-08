@@ -8,7 +8,7 @@ const PhotoThumbnail = ({photo}) => {
         <img src="https://www.w3schools.com/css/img_5terre.jpg" alt="" />
         <div className="overlay">
             <div className="text">
-                <div className="quote"><Link to={`/photo/${photo.id}`}><FaEye /></Link></div>
+                <div className="quote"><Link to={`/photo/${photo.id}`} target="_blank"><FaEye /></Link></div>
             </div>
         </div>
     </div>
