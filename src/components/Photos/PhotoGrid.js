@@ -12,7 +12,6 @@ const PhotoGrid = ({ photosList }) => {
                     return(
                         <Col key={photo.id} lg={2} md={4} sm={4} xs={6} style={{textAlign:"center", marginBottom: "20px"}}>
                         <PhotoThumbnail photo={photo} />
-                        <p>{photo.id}</p>
                         </Col>
                     );
                     })}
