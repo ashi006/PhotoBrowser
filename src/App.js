@@ -24,10 +24,10 @@ const App = () => {
           <Route path='/' element={
             <Container>
               <Row><h4 className="page-description">You are viewing all available photos</h4></Row>              
-              <Suspense fallback={<Row style={{textAlign:"center"}}><Col><img src={Spinner} style={{height: "40px"}} alt="Loading..." /></Col></Row>}><Photos /></Suspense>
+              <Suspense fallback={<Row style={{textAlign:"center"}}><Col><img src={Spinner} style={{height: "40px"}} alt="Loading..." /></Col></Row>}><Photos  /></Suspense>
             </Container>
           } />
-          <Route path='/albums' element={
+          <Route path='albums' element={
             <Container>
               <Row><h4 className="page-description">You are viewing all available albums</h4></Row>   
               <Suspense fallback={<Row style={{textAlign:"center"}}><Col><img src={Spinner} style={{height: "40px"}} alt="Loading..." /></Col></Row>}><Albums /></Suspense>
@@ -51,7 +51,7 @@ const App = () => {
                 <SingleAlbum />
             </Container>
           }/>
-          <Route path='/photo/:id' element={
+          <Route path='photo/:id' element={
             <Container>
               <Row><h4 className="page-description">Single Photo Details</h4></Row>
               <SinglePhoto />

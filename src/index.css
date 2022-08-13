@@ -250,18 +250,27 @@ code {
 .photo-wrapper {
   border-radius: 23px;
   position: relative;
-  box-shadow: 3px 4px 16px rgb(165 165 165 / 81%);
+  box-shadow: 3px 4px 16px #ccc;
+  transition: all 1s;
 }
 .photo-wrapper img {
   transition: all 1s;
   border-radius: 20px;
   width: 100%;
 }
+.photo-wrapper-heading {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #595959;
+}
 .photo-wrapper:hover {
-  box-shadow: 10px 10px 16px rgb(165 165 165 / 81%);
+  border: 2px solid #d6d6d6;
+  /* box-shadow: 10px 10px 16px rgb(165 165 165 / 81%); */
+  box-shadow: 10px 10px 14px #ccc, -10px -10px 14px #ccc, 10px -10px 14px #ccc, -10px 10px 14px #ccc;
 }
 .photo-wrapper:hover img {
   transform: scale(1.08);
+  border: 3px solid #e6e5e5;
 }
 .photo-wrapper .overlay {
   position: absolute;

@@ -25,8 +25,8 @@ const PhotoDetail = ({resource}) => {
   return (
     <Row>
       <Col lg={6}>
-        <a href="https://www.w3schools.com/css/img_5terre.jpg" target="_blank" rel="noreferrer"><img src="https://www.w3schools.com/css/img_5terre.jpg" alt="" /></a>
-        {/* <a href={photoDetail.url} target="_blank"><img src={photoDetail.thumbnailUrl} alt="" /></a> */}
+        {/* <a href="https://www.w3schools.com/css/img_5terre.jpg" target="_blank" rel="noreferrer"><img src="https://www.w3schools.com/css/img_5terre.jpg" alt="" /></a> */}
+        <a href={photoDetails.url} target="_blank"  rel="noreferrer"><img src={photoDetails.url} alt="" style={{width: "100%"}} /></a>
       </Col>
       <Col lg={6}>
         <h1>{photoDetails.title}</h1>
@@ -64,7 +64,7 @@ const UserDetail = ({resource}) => {
       <h4 className="single-photo-heading">Uploaded by</h4>
       <ul style={{listStyle: "none", padding:0}}>
         <li><FaUser /> &nbsp;{userDetails.name} ({userDetails.username})</li>
-        <li><FaEnvelope /> &nbsp;{userDetails.email}</li>
+        <li><FaEnvelope /> &nbsp;<a href={`mailto:${userDetails.email}`} target="_blank" rel="noreferrer" >{userDetails.email}</a></li>
         <li><FaPhone /> &nbsp;{userDetails.phone}</li>
         <li><FaGlobe /> &nbsp;<a href={userDetails.website} target="_blank" rel="noreferrer">{userDetails.website}</a></li>
         <li><FaMapMarker/> &nbsp;{userDetails.address.suite}, {userDetails.address.street}, {userDetails.address.city}</li>

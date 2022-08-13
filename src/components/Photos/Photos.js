@@ -8,7 +8,7 @@ import Pagination from '../Pagination';
 import PhotoGrid from './PhotoGrid';
 import { PAGE_LIMIT } from '../../constants';
 
-const Photos = ({albumId}) => {
+const Photos = ({urlTo, albumId}) => {
   let count, resource;
   if (albumId) {
     count = getAlbumPhotos(albumId, 1);
@@ -16,7 +16,7 @@ const Photos = ({albumId}) => {
   } else {
     count = getAllPhotos(1);
     resource = getAllPhotos(1);
-  }
+  } 
 
   return (
     <>
@@ -39,7 +39,7 @@ const GetPhotos = ({resource, count, albumId}) => {
 
   const handlePageClick = (data) => {
     const currentPage = data.selected + 1;
-    if(albumId)
+    if(albumId) 
       setResource(getAlbumPhotos(albumId, currentPage));
     else
       setResource(getAllPhotos(currentPage));

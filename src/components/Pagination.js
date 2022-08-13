@@ -1,6 +1,6 @@
 import ReactPaginate from "react-paginate";
 
-const Pagination = ({ handlePageClick, pageCount }) => {
+const Pagination = ({ handlePageClick, pageCount}) => {
     return (
         <ReactPaginate
             previousLabel = {"Prev"}

@@ -4,7 +4,7 @@ import UserIcon from '../../images/user-icon.jpg';
 const UserThumbnail = ({user}) => {
   return (
     <div className="user-wrapper">
-      <Link to={`/user/${user.id}`} target="_blank">
+      <Link to={`/user/${user.id}`}>
           <img src={UserIcon} alt="" />          
         </Link>
         <ul>
