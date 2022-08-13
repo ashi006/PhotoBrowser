@@ -16,11 +16,6 @@ git clone [https://github.com/ashi006/PhotoBrowser.git](https://github.com/ashi0
 cd into the project's directory.\
 Run npm install command to install all the dependencies in packages.json file.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
 ### `npm start`
 
 Runs the app in the development mode.\
