@@ -2,6 +2,10 @@
 
 This project was created with [Create React App](https://github.com/facebook/create-react-app).
 
+## Live Demo
+
+[https://photoframe-futurice.netlify.app](https://photoframe-futurice.netlify.app)
+
 ## How to run this project
 
 Follow the steps given below:
