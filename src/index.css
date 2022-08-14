@@ -383,6 +383,14 @@ code {
   font-size: 18px;
 }
 .single-user-detail li {
-  margin-top: 40px;
+  margin-top: 30px;
+}
+.single-user-pic {
+  width: 100%;
+}
+@media(max-width: 426px) {
+  .single-user-pic {
+    width: 80% !important;
+  }
 }
 /* Single User Component - End */
