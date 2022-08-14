@@ -44,6 +44,9 @@ const Header = () => {
                 "height": activeWidthNewAnimHeight + "px",
                 "width": activeWidthNewAnimWidth + "px"
             });
+
+            if(window.innerWidth < 992)
+                $(".navbar-collapse").hide();
         });        
     } 
     
