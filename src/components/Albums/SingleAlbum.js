@@ -6,7 +6,7 @@ import UserIcon from '../../images/user-icon-2.jpg';
 import Photos from '../Photos/Photos';
 import { useParams } from 'react-router-dom';
 import { getAlbumDetails, getUserDetails } from '../../api';
-import { FaUser, FaEnvelope, FaPhone, FaGlobe, FaMapMarker } from 'react-icons/fa';
+import { FaUser, FaEnvelope, FaPhone, FaGlobe, FaMapMarker, FaBuilding } from 'react-icons/fa';
 
 const SingleAlbum = () => {
     const { id } = useParams();
