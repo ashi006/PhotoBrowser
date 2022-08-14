@@ -41,25 +41,23 @@ const UserDetail = ({resource, albumId}) => {
     return (
         <>
             <Row style={{backgroundColor: "#fff"}}>
-            <Col lg={2}><img src={UserIcon} alt="" style={{width: "100%"}} /></Col>
-            <Col lg={10}>
+            <Col lg={2} sm={6}>
+                <img className="single-user-pic" src={UserIcon} alt="" />
+            </Col>
+            <Col lg={10} sm={6}>
                 <Row>
-                    <Col lg={3}>
+                    <Col lg={6}>
                         <ul className="single-user-detail">
                             <li><FaUser /> &nbsp;{userDetails.name} ({userDetails.username})</li>
                             <li><FaEnvelope /> &nbsp;{userDetails.email}</li>
-                        </ul>
-                    </Col>
-                    <Col lg={3}>
-                        <ul className="single-user-detail">
                             <li><FaPhone /> &nbsp;{userDetails.phone}</li>
-                            <li><FaGlobe /> &nbsp;<a href={userDetails.website} target="_blank" rel="noreferrer">{userDetails.website}</a></li>
                         </ul>
                     </Col>
                     <Col lg={6}>
                         <ul className="single-user-detail">
+                            <li><FaGlobe /> &nbsp;<a href={userDetails.website} target="_blank" rel="noreferrer">{userDetails.website}</a></li>
+                            <li><FaBuilding/> &nbsp;{userDetails.company.name}</li>
                             <li><FaMapMarker/> &nbsp;{userDetails.address.suite}, {userDetails.address.street}, {userDetails.address.city}</li>
-                            <li><FaMapMarker/> &nbsp;{userDetails.company.name}</li>
                         </ul>
                     </Col>
                 </Row>
