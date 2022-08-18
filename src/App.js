@@ -1,10 +1,10 @@
 import {Suspense, lazy} from 'react';
-import Header from "./components/Header";
+import Header from "./components/Common/Header";
 import SinglePhoto from "./components/Photos/SinglePhoto";
 import SingleUser from "./components/Users/SingleUser";
 import SingleAlbum from "./components/Albums/SingleAlbum";
-import PageNotFound from "./components/PageNotFound";
-import Footer from "./components/Footer";
+import PageNotFound from "./components/Common/PageNotFound";
+import Footer from "./components/Common/Footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';

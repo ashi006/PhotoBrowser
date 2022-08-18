@@ -17,6 +17,7 @@ code {
   margin-bottom: 60px !important;
   padding-top: 100px;
   padding-bottom: 50px;
+  max-width: 1600px !important;
 }
 .page-description {
   text-align: center;

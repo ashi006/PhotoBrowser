@@ -5,8 +5,8 @@ import Spinner from '../../images/spinner.gif';
 import UserIcon from '../../images/user-icon-2.jpg';
 import Photos from '../Photos/Photos';
 import { useParams } from 'react-router-dom';
+import UserInfo from '../Common/UserInfo';
 import { getAlbumDetails, getUserDetails } from '../../api';
-import { FaUser, FaEnvelope, FaPhone, FaGlobe, FaMapMarker, FaBuilding } from 'react-icons/fa';
 
 const SingleAlbum = () => {
     const { id } = useParams();
@@ -41,27 +41,10 @@ const UserDetail = ({resource, albumId}) => {
     return (
         <>
             <Row style={{backgroundColor: "#fff"}}>
-            <Col lg={2} sm={6}>
-                <img className="single-user-pic" src={UserIcon} alt="" />
-            </Col>
-            <Col lg={10} sm={6}>
-                <Row>
-                    <Col lg={6}>
-                        <ul className="single-user-detail">
-                            <li><FaUser /> &nbsp;{userDetails.name} ({userDetails.username})</li>
-                            <li><FaEnvelope /> &nbsp;{userDetails.email}</li>
-                            <li><FaPhone /> &nbsp;{userDetails.phone}</li>
-                        </ul>
-                    </Col>
-                    <Col lg={6}>
-                        <ul className="single-user-detail">
-                            <li><FaGlobe /> &nbsp;<a href={userDetails.website} target="_blank" rel="noreferrer">{userDetails.website}</a></li>
-                            <li><FaBuilding/> &nbsp;{userDetails.company.name}</li>
-                            <li><FaMapMarker/> &nbsp;{userDetails.address.suite}, {userDetails.address.street}, {userDetails.address.city}</li>
-                        </ul>
-                    </Col>
-                </Row>
-            </Col>
+              <Col lg={2} sm={6}>
+                  <img className="single-user-pic" src={UserIcon} alt="" />
+              </Col>
+              <UserInfo userDetails={userDetails} />
             </Row>
             <Row>
                 <h4 style={{backgroundColor:"#e8e7e7", padding:"5px 10px", margin:"20px 0", color:"#5161ce"}}>Photos</h4>

@@ -4,7 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Spinner from '../../images/spinner.gif';
 import { getAllPhotos, getAlbumPhotos } from '../../api';
-import Pagination from '../Pagination';
+import Pagination from '../Common/Pagination';
 import PhotoGrid from './PhotoGrid';
 import { PAGE_LIMIT } from '../../constants';
 
